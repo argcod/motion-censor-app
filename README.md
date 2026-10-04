@@ -19,11 +19,11 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-2. Start MySQL. Default connection is `localhost` / database `motion_db` / user `root` / password `root`. On first launch the app creates the database, tables, and seeds admin + a default floor plan.
+2. Start MySQL. Defaults are `localhost` / database `motion_db` / user `root` / password `root`. On first launch the app creates the database, tables, and seeds admin + a default floor plan. Different credentials go in `.env` as `DB_HOST`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` (see step 4).
 
-3. Confirm `assets/isometric_base.jpg` exists (shipped with the project).
+3. Add an isometric floor-plan image at `assets/isometric_base.jpg`. That file is not included. You can also choose one later with Floor Plan or Settings → Replace Image. If it is missing, the viewport shows where to put it.
 
-4. Copy `.env.example` to `.env` and fill secrets for Mobile Alerts. Do not commit real tokens.
+4. Copy `.env.example` to `.env`. Optional MySQL overrides and Mobile Alert secrets both live there. Do not commit real tokens.
 
 5. Flash `esp32_firmware/main.ino` to your ESP32. Note the COM port. Firmware sends `MOTION,{location},{sensorID}` at 115200 baud (e.g. `MOTION,Room1,Sensor01`).
 

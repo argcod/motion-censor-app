@@ -1,17 +1,34 @@
+import os
 import mysql.connector
 from mysql.connector import Error
 import datetime
 import bcrypt
 from utils.logger import logger
-from utils.paths import asset_path, path_str
+from utils.paths import asset_path, path_str, project_path
+
+
+def _load_project_env() -> None:
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(project_path(".env"))
+    except ImportError:
+        pass
+
+
+def _mysql_setting(explicit, env_key: str, default: str) -> str:
+    """Constructor args win; otherwise .env / process env; otherwise the built-in default."""
+    if explicit is not None:
+        return explicit
+    return os.getenv(env_key, default)
 
 
 class DatabaseManager:
-    def __init__(self, host='localhost', database='motion_db', user='root', password='root'):
-        self.host = host
-        self.database = database
-        self.user = user
-        self.password = password
+    def __init__(self, host=None, database=None, user=None, password=None):
+        _load_project_env()
+        self.host = _mysql_setting(host, "DB_HOST", "localhost")
+        self.database = _mysql_setting(database, "DB_NAME", "motion_db")
+        self.user = _mysql_setting(user, "DB_USER", "root")
+        self.password = _mysql_setting(password, "DB_PASSWORD", "root")
         self.conn = None
         self.setup_database()
 

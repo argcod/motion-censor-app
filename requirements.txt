@@ -1,0 +1,12 @@
+customtkinter
+matplotlib
+mysql-connector-python
+pyserial
+pandas
+fpdf2
+opencv-python
+Pillow
+bcrypt
+requests
+twilio
+python-dotenv

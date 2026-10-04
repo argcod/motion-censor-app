@@ -1,0 +1,27 @@
+class Theme:
+    BG_PRIMARY = "#07111D"
+    BG_SECONDARY = "#0B1624"
+    PANEL = "#0E1A28"
+    PANEL_LIGHT = "#111F2E"
+    BG_CARD = "#142333"
+    BORDER = "#21364A"
+    
+    PRIMARY = "#1597FF"
+    PRIMARY_LIGHT = "#00B7FF"
+    CYAN_GLOW = "#00D9FF"
+    
+    SUCCESS = "#35E38A"
+    WARNING = "#FFB020"
+    DANGER = "#FF3B3B"
+    DANGER_LIGHT = "#FF4D4D"
+    
+    TEXT_PRIMARY = "#F5F9FF"
+    TEXT_SECONDARY = "#91A4B8"
+    TEXT_MUTED = "#5F7185"
+
+class WindowConfig:
+    MIN_WIDTH = 1100
+    MIN_HEIGHT = 700
+    DEFAULT_WIDTH = 1400
+    DEFAULT_HEIGHT = 850
+    TITLE = "SMARTSECURE AI"

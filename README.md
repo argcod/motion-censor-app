@@ -115,5 +115,4 @@ core/
 components/
 ui/
 tests/
-_legacy/            # quarantined unused modules
 ```

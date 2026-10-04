@@ -1,0 +1,243 @@
+<mxfile host="app.diagrams.net" modified="2026-09-19T04:22:00.000Z" agent="Cursor" version="24.7.8" type="device">
+  <diagram id="lms-class" name="Library Management System - Class Diagram">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Library Management System — Class Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="800" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- ========== User (base) ========== -->
+        <mxCell id="cls-user" value="«abstract»&#xa;User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=48;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="user-attrs" value="- userId: int&#xa;- name: String&#xa;- email: String&#xa;- password: String&#xa;- phone: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-user">
+          <mxGeometry y="48" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="user-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-user">
+          <mxGeometry y="138" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="user-methods" value="+ login(): boolean&#xa;- logout(): void&#xa;+ updateProfile(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-user">
+          <mxGeometry y="146" width="240" height="54" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Member ========== -->
+        <mxCell id="cls-member" value="Member" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="member-attrs" value="- membershipId: String&#xa;- joinDate: Date&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-member">
+          <mxGeometry y="32" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="member-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-member">
+          <mxGeometry y="92" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="member-methods" value="+ searchBook(): List&#xa;+ borrowBook(): void&#xa;+ returnBook(): void&#xa;+ reserveBook(): void&#xa;+ viewHistory(): List&#xa;+ payFine(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-member">
+          <mxGeometry y="100" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Librarian ========== -->
+        <mxCell id="cls-librarian" value="Librarian" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="640" y="360" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="librarian-attrs" value="- employeeId: String&#xa;- department: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-librarian">
+          <mxGeometry y="32" width="240" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="librarian-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-librarian">
+          <mxGeometry y="76" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="librarian-methods" value="+ addBook(): void&#xa;+ updateBook(): void&#xa;+ removeBook(): void&#xa;+ issueBook(): void&#xa;+ processReturn(): void&#xa;+ generateReport(): Report" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-librarian">
+          <mxGeometry y="84" width="240" height="96" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Admin ========== -->
+        <mxCell id="cls-admin" value="Admin" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="360" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-attrs" value="- adminLevel: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-admin">
+          <mxGeometry y="32" width="220" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-admin">
+          <mxGeometry y="64" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-methods" value="+ manageUsers(): void&#xa;+ configureSystem(): void&#xa;+ backupData(): void&#xa;+ generateReport(): Report" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-admin">
+          <mxGeometry y="72" width="220" height="88" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Book ========== -->
+        <mxCell id="cls-book" value="Book" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="80" y="640" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="book-attrs" value="- bookId: int&#xa;- isbn: String&#xa;- title: String&#xa;- author: String&#xa;- category: String&#xa;- totalCopies: int&#xa;- availableCopies: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-book">
+          <mxGeometry y="32" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="book-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-book">
+          <mxGeometry y="142" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="book-methods" value="+ isAvailable(): boolean&#xa;+ updateCopies(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-book">
+          <mxGeometry y="150" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Loan ========== -->
+        <mxCell id="cls-loan" value="Loan" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="400" y="640" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="loan-attrs" value="- loanId: int&#xa;- issueDate: Date&#xa;- dueDate: Date&#xa;- returnDate: Date&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-loan">
+          <mxGeometry y="32" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="loan-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-loan">
+          <mxGeometry y="122" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="loan-methods" value="+ issue(): void&#xa;+ close(): void&#xa;+ isOverdue(): boolean&#xa;+ calculateFine(): double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-loan">
+          <mxGeometry y="130" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Reservation ========== -->
+        <mxCell id="cls-reservation" value="Reservation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="720" y="640" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="res-attrs" value="- reservationId: int&#xa;- reserveDate: Date&#xa;- expiryDate: Date&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-reservation">
+          <mxGeometry y="32" width="220" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="res-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-reservation">
+          <mxGeometry y="104" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="res-methods" value="+ create(): void&#xa;+ cancel(): void&#xa;+ fulfill(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-reservation">
+          <mxGeometry y="112" width="220" height="68" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Fine ========== -->
+        <mxCell id="cls-fine" value="Fine" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;fontColor=#111827;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="640" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="fine-attrs" value="- fineId: int&#xa;- amount: double&#xa;- paidDate: Date&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-fine">
+          <mxGeometry y="32" width="220" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="fine-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#111827;" vertex="1" parent="cls-fine">
+          <mxGeometry y="104" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="fine-methods" value="+ calculate(): double&#xa;+ pay(): void&#xa;+ isPaid(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" parent="cls-fine">
+          <mxGeometry y="112" width="220" height="68" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Inheritance: Member → User ========== -->
+        <mxCell id="gen-member" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#111827;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-member" target="cls-user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Inheritance: Librarian → User ========== -->
+        <mxCell id="gen-librarian" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#111827;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-librarian" target="cls-user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Inheritance: Admin → User ========== -->
+        <mxCell id="gen-admin" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#111827;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-admin" target="cls-user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== Member — Loan (1..* ) ========== -->
+        <mxCell id="assoc-member-loan" value="" style="endArrow=none;html=1;strokeColor=#374151;strokeWidth=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-member" target="cls-loan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mult-ml-1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-member-loan">
+          <mxGeometry x="-0.7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-ml-2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-member-loan">
+          <mxGeometry x="0.7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== Member — Reservation ========== -->
+        <mxCell id="assoc-member-res" value="" style="endArrow=none;html=1;strokeColor=#374151;strokeWidth=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-member" target="cls-reservation">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="495" />
+              <mxPoint x="620" y="685" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-mr-1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-member-res">
+          <mxGeometry x="-0.75" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-mr-2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-member-res">
+          <mxGeometry x="0.75" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== Book — Loan ========== -->
+        <mxCell id="assoc-book-loan" value="" style="endArrow=none;html=1;strokeColor=#374151;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-book" target="cls-loan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mult-bl-1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-book-loan">
+          <mxGeometry x="-0.7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-bl-2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-book-loan">
+          <mxGeometry x="0.7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== Book — Reservation ========== -->
+        <mxCell id="assoc-book-res" value="" style="endArrow=none;html=1;strokeColor=#374151;strokeWidth=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-book" target="cls-reservation">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="790" />
+              <mxPoint x="340" y="775" />
+              <mxPoint x="680" y="775" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-br-1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-book-res">
+          <mxGeometry x="-0.8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-br-2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-book-res">
+          <mxGeometry x="0.8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== Loan — Fine (1 to 0..1) ========== -->
+        <mxCell id="assoc-loan-fine" value="" style="endArrow=none;html=1;strokeColor=#374151;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-loan" target="cls-fine">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="740" />
+              <mxPoint x="980" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-lf-1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-loan-fine">
+          <mxGeometry x="-0.75" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-lf-2" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#111827;fontFamily=Helvetica;" vertex="1" connectable="0" parent="assoc-loan-fine">
+          <mxGeometry x="0.75" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== Librarian manages Book ========== -->
+        <mxCell id="assoc-lib-book" value="manages" style="endArrow=none;html=1;strokeColor=#374151;strokeWidth=1;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;dashed=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cls-librarian" target="cls-book">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
